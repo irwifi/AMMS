@@ -1,0 +1,13 @@
+*************************** WARNING ***************************
+DO NOT SAVE SENSITIVE INFORMATION LIKE NAMES, LOCATIONS AND PASSWORD IN THE FILES SINCE THE FILES WILL BE SAVED IN THE PUBLIC REPOSITORY.
+*************************** WARNING ***************************
+
+====== DIRECTORY STRUCTURE ======
+# This project was created using composer to install the laravel package. So, it has the directory structure of Laravel framework.
+
+# Apart from the laravel directory structure, there are few files and folders that are listed below
+
+#/info/
+	== This folder consists of following information files.
+	== branch_info.itxt - it gives informatin about the current branch and this should be the first commit of the project.
+	== dictionary.itxt - It describes the directory structure, shorthand naming coventions and other practices that are followed in the project.

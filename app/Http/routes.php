@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('dashboard');
 });
+
+Route::get('meter', 'con_meter@meter_status');

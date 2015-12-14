@@ -4,6 +4,7 @@
         <title>Laravel</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
         <style>
             html, body {
@@ -66,6 +67,7 @@
         </div>
 
         <div class = 'dashboard_buttons'>
+        <i class="fa fa-home fa-lg"></i> fa-lg
             <a href="meter"><div>Meter</div></a>
             <a href="entry"><div>Entry</div></a>
             <a href="log"><div>Log</div></a>

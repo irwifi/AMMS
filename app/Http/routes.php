@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('dashboard');
+	$home_array = ["home" => "home"];
+    return view('dashboard', $home_array);
 });
 
 Route::get('meter', 'con_meter@meter_status');

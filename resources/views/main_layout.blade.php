@@ -1,3 +1,12 @@
+<?php
+if (!isset($home)) {$home = '';}
+
+if ($home == "home")
+    {$home_menu = '';}
+else
+    {$home_menu = '<i class="fa fa-home fa-2x"></i>';}
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -20,7 +29,17 @@
                 font-family: 'Lato';
             }
 
-/*            .container {
+            .containerhome {
+                text-align: center;
+                vertical-align: text-top;
+            }
+
+            .contenthome {
+                text-align: center;
+                display: inline-block;
+            }
+
+            .container {
                 text-align: left;
                 vertical-align: text-top;
                 margin-bottom: 20px;
@@ -30,16 +49,6 @@
             .content {
                 text-align: right;
                 padding-right: 24px;
-                display: inline-block;
-            }*/
-
-            .container {
-                text-align: center;
-                vertical-align: text-top;
-            }
-
-            .content {
-                text-align: center;
                 display: inline-block;
             }
 
@@ -71,9 +80,20 @@
 
             .buttons {
                 text-align: right;
+                display: inline-block;
+                float:right;
+                padding-top: 20px;
+                padding-right: 20px;
+                color:#6E6E6E;
+            }
+
+            .buttonshome {
+                text-align: right;
                 display: block;
                 padding-right: 20px;
                 color:#6E6E6E;
+                float: none;
+                padding-top: 0;
             }
 
             .buttons i {
@@ -127,13 +147,14 @@
     </head>
 
     <body>
-        <div class="container">
-            <div class="content">
+        <div class="container{{$home}}">
+            <div class="content{{$home}}">
                 <div class="heading">@yield('heading')</div>
             </div>
 
-            <div class="buttons">
-                <i class="fa fa-home fa-2x"></i>
+            <div class="buttons buttons{{$home}}">
+                {!! $home_menu !!}
+
                 <i class="fa fa-cog fa-2x"></i>
             </div>
         </div>

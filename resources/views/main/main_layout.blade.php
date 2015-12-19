@@ -1,10 +1,15 @@
 <?php
-if (!isset($home)) {$home = '';}
+if (!isset($page)) {$page = '';}
 
-if ($home == "home")
-    {$home_menu = '';}
+if ($page == "home")
+    {$home_button = '';}
 else
-    {$home_menu = '<i class="fa fa-home fa-2x"></i>';}
+    {$home_button = '<a href="/"><i class="fa fa-home fa-2x"></i></a>';}
+
+if ($page == "settings")
+    {$settings_button = '';}
+else
+    {$settings_button = '<a href="settings"><i class="fa fa-cog fa-2x"></i></a>';}
 ?>
 
 <!DOCTYPE html>
@@ -84,26 +89,30 @@ else
                 float:right;
                 padding-top: 20px;
                 padding-right: 20px;
-                color:#6E6E6E;
             }
 
             .buttonshome {
                 text-align: right;
                 display: block;
                 padding-right: 20px;
-                color:#6E6E6E;
                 float: none;
                 padding-top: 0;
             }
+            .buttonshome a {
+                color:#6E6E6E;
+            }
+            .buttons a {
+                color:#6E6E6E;
+            }
 
-            .buttons i {
+            .buttons a i {
                 border: solid thin;
                 padding: 3px 5px;
                 border-radius: 5px;
                 cursor: pointer;
             }
 
-            .buttons i:hover {
+            .buttons a i:hover {
                 color: white;
                 background-color: #6E6E6E;
             }
@@ -143,19 +152,19 @@ else
             .balancer {
                 display: inline-block;
                 width: 140px;
-            }        </style>
+            }
+        </style>
     </head>
 
     <body>
-        <div class="container{{$home}}">
-            <div class="content{{$home}}">
+        <div class="container{{$page}}">
+            <div class="content{{$page}}">
                 <div class="heading">@yield('heading')</div>
             </div>
 
-            <div class="buttons buttons{{$home}}">
-                {!! $home_menu !!}
-
-                <i class="fa fa-cog fa-2x"></i>
+            <div class="buttons buttons{{$page}}">
+                {!! $home_button !!}
+                {!! $settings_button !!}
             </div>
         </div>
 
